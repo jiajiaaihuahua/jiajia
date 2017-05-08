@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.foot{ width:1000px; margin:0 auto; height:auto;padding-top:32px; font-family:寰�杞���榛�}
+.foot_nav{ width:480px;float:left;}
+.foot_logo{ width:520px; float:left; height:200px;background:url(../../../images/foot_logo.gif) repeat-y left top;}
+.foot_nav ul li{ float:left;padding-left:15px; width:85px; margin-right:60px; text-align:center;color:#272727; height:50px;}
+.foot_tit{ background:url(../../../images/foot_a.jpg) no-repeat left 5px;padding-bottom:10px; font-weight:bold;}
+.foot_nav ul li p{ padding-left:12px; color:#585656; font-size:12px; line-height:22px;}
+.copyright{ padding-left:30px; line-height:30px; font-size:14px;}
+.weixin{float:right; position: relative; left:105px; top:-175px;}
+.pic_wx{ margin-right:10px;}

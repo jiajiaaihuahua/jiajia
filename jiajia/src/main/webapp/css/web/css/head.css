@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+/*======澶撮�ㄦ�峰�======*/
+.head{ height:74px;}
+.top_{ width:1000px; margin:0 auto;}
+.top_ span{ float:right; padding-right:45px;font-size:12px;font-family: 瀹�浣�}
+.top_ a{ color:#FFF; line-height:24px;}
+.indexnav{ width:1000px; height:48px; display:table; margin:0 auto;}
+.logo{ width:210px; height:43px;padding-top:5px;}
+
+/*瀵艰��*/
+.navBar_{width:570px; float:left;height:50px;line-height:50px; background:url(../../../images/top_b.gif) repeat-x;color:#333;}
+.nav_{position:relative;width:570px;margin:0 auto;font-size:14px;}
+.nav_ a{color:#fff;}
+.nav_ h3{ width:90px; text-align:center;font-size:100%;font-weight:normal; color:#cccccc;}
+.nav_ .m{float:left;position:relative;z-index:999;}
+.nav_ h3 a{display:block;width:90px;text-align:center;font-weight:bold;color:#dad8d8;}
+.nav_ .sub{display:none;position:absolute; height:auto;left:-3px;top:50px;z-index:1;width:160px;border-top:0;background: #d3d3d3 url(../../../images/hoverbj.gif) repeat-x;}
+.nav_ .sub li{text-align:center;width:150px;padding:0 5px;margin-bottom:-1px;}
+.nav_ .sub li a{display:block;border-bottom:1px solid #efefef;padding:8px 0;height:28px;line-height:28px;color:#262626;font-size:14px;font-weight:bold; background:url(../../../images/sub_li_let.jpg) 13px 20px no-repeat; font-family:'寰�杞���榛�'; font-size:14px; font-weight: 300}
+.nav_ .sub li a:hover{color:#FE7700;}
+/*涓��㈡椿�ㄧ��灏�绠�澶村�炬���峰�*/
+
+.nav_ .block{height:8px;width:100px;background: url(../../../images/subhover.png) no-repeat center top;position:absolute;top:42px; left:100px;overflow:hidden;}
+
+.big{ padding-top:5px;}
+.nav_ .block{height:8px;width:100px;background: url(../../../images/subhover.png) no-repeat center top;position:absolute;top:42px; left:100px;overflow:hidden;}
+.big{ padding-top:5px;}
+
+.search{ margin-top:10px;}
+.search dt {background:url(../../../images/searchbj.png) no-repeat;width:185px;height: 37px;float: left;display: inline;}
+.search dt span {width: 22px;height: 25px;float: right;margin-right: 10px;margin-top:3px;}
+.search dt input {width: 140px;height: 15px;border: 0;margin-top:5px;margin-left: 10px;line-height:20px;color:#666;}
+
+
+
+
+

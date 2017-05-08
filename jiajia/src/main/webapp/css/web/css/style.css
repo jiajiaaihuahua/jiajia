@@ -1,0 +1,192 @@
+@charset "utf-8";
+/*���垮���峰�*/
+
+/****浜у��灞�绀�_锛��靛����瀵�-琛��垮�℃��-棰�������-�朵���绻�浜у������锛�*****/
+.banner{ width:1000px; height:236px; margin:0 auto;}
+.service_elc{ width:1000px; margin:0 auto 20px auto;}
+.service_elc a{ line-height:24px; color:#000; font-size:15px;}
+.service_elc a:visited {color: #000;}
+.service_elc a:hover {color: #084d72;}
+.service_elc a:active {color: #000;}
+
+/*宸�渚�*/
+.leftsidebar{ width:720px; float:left; margin-bottom:15px;}
+/*tab����*/
+.contact{width:750px;}
+.img_contact{width:700px;height: auto;overflow:hidden; padding:17px 0 0 10px;}
+.tab_contact{width:710px;height:40px; line-height:42px;overflow:hidden; background:#e3e3e3}
+.tab_contact ul li{width:128px; height:42px;text-align:center;line-height:42px; background:url(../../../images/elc_a.jpg) no-repeat right center;float:left;margin-left:-1px;color:#FFFFFF;}
+.tab_contact ul li a{color:#464646;font-size:16px;line-height:42px; height:42px; display:block;}
+.tab_contact ul li a:hover{ color:#084d72;}
+.tab_contact ul li.current{width:130px;background: #FFF;}/*hover*/
+.tab_contact ul li.current a{color:#666;font-weight:600;}
+.contact_a li{font-size:14px;}
+.contact_a li a{ color:#000;}
+#tab1_2, #tab1_4, #tab1_6, #tab1_8, #tab2_2, #tab2_4, #tab2_6, #tab2_8{margin-left:0;}
+.contact_xzsp li{ line-height:30px; font-size:14px; border-bottom:1px solid #e7e7e7;}
+
+
+/**========����妗�渚�椤甸�㈢��绔��峰�========**/
+.case { background:url(../../../images/tabbj.gif) repeat-x; border:1px solid #e6e6e6;}
+.case ul li{ width:350px;}
+.tab_contact ul li.currentaa{width:350px;background: #FFF;}/*hover*/
+
+
+
+/**=======缁��告�渚�涓�绾ч〉��=======**/
+.contact_djal li{ line-height:30px; width:175px;float:left;font-size:14px; border-bottom:1px solid #e7e7e7;}
+.customer{ width:1000px; margin:0 auto;}
+.customer h3{ color:black; font-size:26px; text-align:center; line-height:30px; margin-bottom:35px;font-family:寰�杞���榛�;}
+.customer_case{ margin-bottom:15px; width:1000px;}
+.customer_case h4{ color:#000; font-weight:bolder;font-size:16px;line-height:35px;}
+.customer_case p{ line-height:34px; font-size:16px; color:#5e5d5d; text-align:justify; margin-bottom:10px;text-indent:2em}
+.customer_case h5{ color:#7f7f7f; font-weight:bolder;font-size:15px;line-height:28px;}
+
+
+
+/**=======��绻��ㄦ��涓�绾ч〉��=======**/
+.action{ width:1000px; margin:0 auto; margin-bottom:40px;}
+.action h3{ color:black; font-size:26px; font-weight:normal;text-align:center; line-height:30px; margin-bottom:15px;font-family:寰�杞���榛�;}
+.action h6{ color:#8c8c8c; font-size:14px; text-align:center; line-height:30px; margin-bottom:35px;}
+.action p{ line-height:34px; font-size:16px; color:#5e5d5d; text-align:justify; margin-bottom:10px;text-indent:2em}
+.action h4{ color:#000; font-weight:bolder;font-size:16px;line-height:35px;}
+.action h5{ color:#000; font-weight:bolder;font-size:15px;line-height:28px;}
+.ceremony{ width:1000px; text-align:center;margin-bottom:40px; height:auto;} 
+.pic_action{ margin-right:10px;}
+
+
+
+/**=======浜у��灞�绀轰�绾ч〉��=======**/
+.platformintro{ width:750px;}
+.platformintro h3{ color:black; font-size:26px; text-align:center;font-weight:normal; line-height:30px; margin-bottom:35px;font-family:寰�杞���榛�;}
+.platformintro p{ width:700px;line-height:34px; font-size:16px; color:#5e5d5d; text-align:justify; margin-bottom:10px;text-indent:2em}
+.platformintro h4{ color:#000; font-weight:bolder;font-size:16px;line-height:35px;}
+.platformintro h5{ color:#000; font-weight:bolder;font-size:15px;line-height:28px;}
+
+
+/**=======�充���浠�5涓�椤甸��=======**/
+/*����===���哥��浠�*/
+.Companyprofile{width:1000px;}
+.tab_Companyprofile{width:1000px;height:40px; line-height:42px;overflow:hidden;}
+.tab_Companyprofile ul li{width:128px; height:42px;text-align:center;line-height:42px; background:url(../../../images/web/images/elc_a.jpg) no-repeat right center;float:left;margin-left:-1px;color:#FFFFFF;}
+.tab_Companyprofile ul li a{color:#575656;font-size:16px;line-height:42px; height:42px; display:block;}
+.tab_Companyprofile ul li a:hover{ color:#084d72;}
+.tab_Companyprofile ul li.current{width:130px;background: #FFF;}/*hover*/
+.tab_Companyprofile ul li.current a{color:#666;font-weight:600;}
+.Companyprofile_a li{font-size:14px;}
+.Companyprofile_a li a{ color:#000;}
+.companypic{float:left;padding-right:15px;}
+.companytext{ width:1000px;}
+.img_Companyprofile{ width:1000px; padding-top:40px;}
+.companytext h3{ color:#747474; font-size:20px;line-height:30px; margin-bottom:15px;}
+.companytext p{ line-height:24px; font-size:14px; color:#7f7f7f; text-align:justify; margin-bottom:20px;}
+
+/*����===浼�涓�����*/
+.culture p{ line-height:32px;font-size:14px; color:#7f7f7f; text-align:justify; margin:0 10px 0 40px;}
+.culturelist{ margin-bottom:35px;}
+
+/*����===�ｈ��璧�璐�*/
+.honor{ width:1000px; height:auto; margin: 0 auto; margin-bottom:10px;}
+.honor h1{ text-indent:3em;font-size:16px; line-height:40px; font-weight:bolder; color:#4e4c4c;}
+.honor h2{ height:2px;background:#cccccc; width:980px; margin-left:20px;display:block;}
+.honor h2 span{width:100px; display:block; height:2px; background:#990033; }
+.honorpic{ margin:0; padding:0; padding:20px 10px; width:1000px;}
+.honorpic li{ float:left; width:240px;margin: 0 8px 10px 0;text-align:center; border:1px solid #cccccc;}
+
+.certifi{ margin:0; padding:0; padding:20px 10px; width:1000px;}
+.certifi li{ float:left; width:240px;margin: 0 8px 10px 0;text-align:center;}
+
+/*����===��绻�浜�杩�*/
+.deeds{ width:915px;padding: 0 0 15px 50px;margin: 0 auto; background:url(../../../images/web/images/deedsbj.gif) left top no-repeat;}
+.deeds p{ line-height:33px;font-size:16px; color:#7f7f7f; text-align:justify;}
+.deeds p span{ margin-right:1em;}
+
+/*����===��宸ラ���*/
+.employee{ width:1000px; padding:0 0 10px 0;margin: 0 auto;}
+.employee li{ float:left; width:250px; margin-bottom:25px;text-align:center;}
+.employee li a{ color:#6a6a6a; line-height:20px;}
+
+
+
+/**=======�伴�诲�ㄦ��椤甸��=======**/
+/*��绻��ㄦ��*/
+.img_zhuonews{ width:1000px; padding-top:25px; margin-bottom:20px;}
+.zhuonews ul li{ line-height:32px; height:32px;font-size:14px; color:#7f7f7f; text-align:justify; padding-left:20px;margin:0 20px; background:url(../../../images/web/images/zhuonewslist.gif) no-repeat left center; border-bottom:1px solid #dddddd;}
+.zhuonews ul li a{ color:#7f7f7f;}
+.zhuonews ul li span{float:right;}
+.zhuonews ul li a:visited {color: #7f7f7f;}
+.zhuonews ul li a:hover {color: #084d72;}
+.zhuonews ul li a:active {color: #7f7f7f;}
+
+/*琛�涓��伴��*/
+.Indusnews{ width:1000px; margin:0 auto;}
+.Indusnews01{ float:left; width:490px; margin:0 10px 30px 0;}
+.Indusnews01 span{ float:left; width:230px;}
+.Indusnewslist{ float:left; width:260px;}
+.Indusnewslist h1{display:block; line-height:30px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break: keep-all;font-size:18px; color:#264974;}
+
+.Indusnewslist p{ line-height:20px;font-size:13px; color:#7f7f7f; text-align:justify; margin-top:10px;}
+.Indusnewslist p a{ color:#7f7f7f; display:block;}
+.Indusnewslist p a:hover{ color:#003366;}
+
+
+
+
+/**=======瀹㈡�锋���￠〉��=======**/
+/*����锛����″��瀹�*/
+.tab01{ width:620px; height:275px; background:#FFF;text-align:center;border-top:1px solid #CCC;border-left:1px solid #CCC; margin-bottom:45px;}
+.tab01 tr td{ height:30px;border-bottom:1px solid #CCC;border-right:1px solid #CCC; padding:5px 5px;}
+.tabzzfw{background:#3074b8; color:#FFF;}
+.tabkhzx{background:#bdd6ee; color:#666666;}
+
+/*����锛����″����*/
+.objective { width:670px; margin:0 auto;}
+.objective h1{ color:#494848; font-size:20px; text-align:center; line-height:60px; margin-bottom:15px;}
+.objective01 p{ line-height:24px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:10px;}
+.objective01{ margin-bottom:43px; width:670px;}
+.objective01 h1{ color:#333333;;font-size:16px;line-height:20px; text-align:left;}
+
+/*����锛���棰�瑙ｇ��*/
+.answer{ padding-top:10px;}
+.answer01{ padding-bottom:15px;width:670px; margin:0 auto;}
+.answer01 h1{ line-height:24px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:5px; background:url(../../../images/web/images/answer.gif) no-repeat left center; padding-left:30px;}
+.answer01 p{ line-height:24px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:10px; padding-left:2em;}
+
+
+
+/**=======�垫��妗�绻�椤甸��=======**/
+/*����:����浼���*/
+.handzf{ width:670px; margin:0 auto;}
+.handzf h1{ color:#dd5800; font-size:20px; text-align:center; line-height:60px; margin-bottom:15px;}
+.handzf01{ padding-bottom:25px;width:670px; margin:0 auto;}
+.handzf01 h1{ line-height:24px; font-size:14px; font-weight:bold;color:#333333; text-align:justify; margin-bottom:5px;}
+.handzf01 p{ line-height:24px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:5px; padding-left:2em;}
+.handzf02{ line-height:24px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:10px; padding-left:2em;
+overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break: keep-all;}
+
+
+/*����:�����′欢==����绋�搴�*/
+.conditions{ width:670px; margin:0 auto;}
+.conditions h1{ color:#dd5800; font-size:20px; text-align:center; line-height:60px; margin-bottom:15px;}
+.conditions p{ line-height:50px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:5px; padding-left:2em;}
+
+
+
+/**=======��绯绘��浠�椤甸��=======**/
+/*����:浜烘������*/
+.recruitment{ padding-top:10px; width:630px; margin:0 auto;}
+.recruitment p{ line-height:30px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:5px; padding-left:1.5em;
+background:url(../../../images/recruitment_a.gif) no-repeat left center;}
+
+/*����:浜烘������涓�绾ч〉��*/
+.recruiLevel{ width:640px; margin:0 auto;}
+.recruiLevel p{ line-height:30px; font-size:13px; color:#7f7f7f; text-align:justify;}
+.recruiLevel h1{ line-height:55px; font-size:14px; font-weight:bold;color:#333333; text-align:justify; margin-bottom:5px;}
+.recruiLevel h2{ line-height:34px; font-weight:bold;font-size:14px; color:#7f7f7f; text-align:justify;}
+
+/*����:��绯绘��浠�*/
+.contactus{ width:670px; margin:0 auto; padding-top:15px;}
+.contactus p{ line-height:24px; font-size:13px; color:#7f7f7f; text-align:justify; margin-bottom:5px; padding-left:2em;}
+.contactus p span{ line-height:34px; font-weight:bold;font-size:14px; color:#7f7f7f; text-align:justify;}
+
+

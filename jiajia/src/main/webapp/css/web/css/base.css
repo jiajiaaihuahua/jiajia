@@ -1,0 +1,78 @@
+@charset "utf-8";
+/*椤甸�㈠�ㄥ�灞���*/
+html{color:#000;background-color:#FFF;}
+*{ margin:0; padding:0;}
+* html .clearfix{height:1%;}
+body {font: 12px/1.5 '寰�杞���榛�';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,input,table,tr,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:2em;}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+ol,ul,li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+input,textarea,select{outline:medium;font-family:inherit;font-size:inherit;*font-size:100%;font-weight:inherit}
+legend{color:#000}
+a{text-decoration:none; cursor:pointer;}
+a:active,a:focus { outline: none; }
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+.clear_{ clear:both;}
+.zoom{zoom:1;}
+.wrapper{ width:auto;}
+.all{ width:1000px; margin:0 auto; height:auto;}
+.content{background:#FFF; width:100%; margin-bottom:20px; height: auto;}
+.line{ margin:0 15px;}
+.line01{ margin:0 15px 40px 15px;}
+
+/*wrapper���ㄥ��规���峰�*/
+.a{height:24px;background:#1c1c1c;}
+.b{height:48px; background:url(../../../images/top_b.gif) repeat-x; border:1px solid #999999;}
+.c{margin-bottom:8px;}
+.d{ background:url(../../../images/secend_bj.gif) repeat-x; height:40px;}
+.e{ height:129px; background: #d5d5d5;}
+.f{background:#e8e8e8; height:252px;}
+.g{ height:236px; background:#e3e3e3; margin-bottom:13px;}
+
+/*椤甸��input�峰�*/
+.input01{ display:inline;border:0;width:135px;height:26px; line-height:26px; background:none; margin:0; padding:0; padding-left:10px;}
+
+/*�充晶���ㄩ�ㄥ���峰�*/
+.rightsidebar{ width:250px; float:left; height:auto; margin-bottom:20px;}
+.contact_phon{height: auto; width:240px; border:1px solid #eaeaea; margin-bottom:15px;}
+.contact_phon h3{ background:url(../../../images/secend_bj.gif) repeat-x; height:42px; line-height:40px; font-size:16px; text-indent:1em;}
+.contact_down{ padding:10px 10px 20px 10px;}
+.contact_down p{ margin-bottom:10px;} 
+.contact_down .tel{ background:url(../../../images/right_a.gif) no-repeat left 10px; padding: 6px 0 0 40px; color:#185e96;}
+.contact_down .email{ background:url(../../../images/right_b.gif) no-repeat left 10px; padding: 15px 0 0 40px; color:#185e96;}
+.contact_down .phone{ background:url(../../../images/right_c.gif) no-repeat left 10px; padding: 15px 0 0 40px; color:#185e96;}
+
+
+/*��椤垫�峰�*/
+.zhuopages{ width:800px; float:right; text-align:right; margin: 20px 15px 0 0;}
+.cutpage{font-size:12px; font-family:Tahoma;}
+.cutpage a{display:inline-block; width:36px; height:36px; line-height:36px;text-align:center;background:#FFF; border:1px solid #e2e2e2; color:#000; padding-left:5px; margin:3px 3px 3px 0;}
+.cutpage a:hover{ background:#258cff;color:#fff;}
+
+
+
+/*�瑰�诲乏�虫���js*/
+.rollBox { padding-right: 0px;width:980px; margin:0 auto;height:auto;padding-bottom: 10px; overflow: hidden; ZOOM: 1; position: relative}
+.rollBox .LeftBotton { background:url(../../../images/jtleft.png) no-repeat left center;left: 5px; float: left; width:30px; CURSOR: pointer; position: absolute;
+height: 136px}
+.rollBox .RightBotton { right: 5px; margin-left:20px;background: url(../../../images/jtright.png) no-repeat right center;float: right; width:30px; CURSOR: pointer;
+position: absolute; height: 136px}
+.rollBox .Cont {height:200px; overflow: hidden; width:980px; margin:0 auto; float:left; display:inline;padding-top: 5px}
+.rollBox .pic { float: left; width:auto; height:126px;text-aliGN: center}
+.pic .first_left{float:left; width:130px; padding-top:15px;margin-right:5px;}
+.pic .first_right{float:left; width:175px;}
+.first_right h1{ width:170px;display:block; line-height:40px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break: keep-all;font-size:15px; color:#2a2a2a; font-weight:bolder;text-align:left;}
+.first_right p{ font-size:12px; font-family:瀹�浣�; text-align:left; width:165px; overflow:hidden; height:75px;line-height:24px; color:#606060;
+display:block;word-break: break-all;word-wrap: break-word;}
+.rollBox .pic img { padding-right: 3px;display: block; padding-left: 3px; background: #fff; padding-bottom: 3px; margin: 0px auto; padding-top: 3px;}
+.rollBox .pic a:hover img { border-right: #5385cc 1px solid; border-top: #5385cc 1px solid; border-left: #5385cc 1px solid; border-bottom: #5385cc 1px solid}
+.rollphotos { margin-top:20px;width:1000px; height:200px; margin:0 auto;}
+.pic b a:hover{ text-decoration: none; color:#ff4740;}

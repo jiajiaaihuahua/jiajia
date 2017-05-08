@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*椤甸�㈠�ㄥ�灞���*/
+html{color:#000;background-color:#FFF;}
+*{ margin:0; padding:0;}
+* html .clearfix{height:1%;}
+body {font: 12px/1.5 '寰�杞���榛�';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,input{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+ol,ul,li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+input,textarea,select{outline:medium;font-family:inherit;font-size:inherit;*font-size:100%;font-weight:inherit}
+legend{color:#000}
+a{text-decoration:none;}
+a:active,a:focus { outline: none; }
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+.clear_{ clear:both;}
+.zoom{zoom:1;}
+.wrapper{ width:auto;}
+
+/*wrapper���ㄥ��规���峰�*/
+.a{height:24px;background:#1c1c1c;}
+.b{height:48px; background:url(../../../images/top_b.gif) repeat-x; border:1px solid #999999;}
+.c{ height: auto; margin-bottom:8px; background:#253b74;}
+.d{ background:url(../../../images/secend_bj.gif) repeat-x; height:40px;}
+.e{ height:129px; background: #d5d5d5; margin-bottom:20px;}
+.f{background:#e8e8e8; height:252px;}
+.g{ height:236px; background:#e3e3e3;}
+
+/*椤甸��input�峰�*/
+.input01{ display:inline;border:0;width:135px;height:26px; line-height:26px; background:none; margin:0; padding:0; padding-left:10px;}

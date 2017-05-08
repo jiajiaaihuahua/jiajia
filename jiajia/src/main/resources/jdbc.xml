@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task" 
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xsi:schemaLocation="http://www.springframework.org/schema/context
+	                       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	                       http://www.springframework.org/schema/beans
+	                       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/task
+                           http://www.springframework.org/schema/task/spring-task-3.0.xsd ">       
+ 	 <!--   事务支持注解  -->
+   	 <tx:annotation-driven transaction-manager="transactionManager"/>
+ 
+  	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+		<!--  
+	    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+	    -->
+	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	    <!--  
+	    -->
+	    <property name="url" value="jdbc:mysql://127.0.0.1:3306/jiajia?useUnicode=true&amp;characterEncoding=UTF-8" />	
+	    
+		<property name="username" value="root" />
+
+		<property name="password" value="sa123" />
+		<property name="initialSize" value="10" />
+		
+		<property name="maxWait" value="60000" />
+		<property name="maxActive" value="20" />
+		<property name="minIdle" value="3" />
+		
+		<property name="removeAbandoned" value="true" />
+		<property name="removeAbandonedTimeout" value="1800" />
+		
+		<property name="testOnBorrow" value="true"/>
+		<property name="validationQuery" value="select 1 from dual"/>
+		
+		<property name="filters" value="mergeStat" />
+		<property name="connectionProperties" value="druid.stat.slowSqlMillis=3000" />		
+	</bean>
+ 
+ 
+
+	<bean id="dbService" class="com.jiajia.component.BaseDatabaseServiceImpl">
+		<!-- 连接数据库 -->
+		<property name="dataSource">
+			<ref bean="dataSource"></ref>
+		</property>
+  	</bean>
+  	
+  	 <!-- 定义事务管理器  -->
+   <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+      <property name="dataSource" ref="dataSource" />
+   </bean>
+ 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+
+   <tx:advice id="txAdvice" transaction-manager="transactionManager">
+      <tx:attributes>
+         <tx:method name="*" propagation="REQUIRED"/>
+      </tx:attributes>
+   </tx:advice>
+
+   <aop:config>
+      <aop:pointcut id="businessService"
+                 expression="execution(* com.jiajia.component.*.*(..))"/>
+      <aop:advisor advice-ref="txAdvice" pointcut-ref="businessService"/>
+   </aop:config>
+</beans>

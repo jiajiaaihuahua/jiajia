@@ -9,22 +9,22 @@
 .logo{ width:210px; height:43px;padding-top:5px;}
 
 /*瀵艰��*/
-.navBar_{width:570px; float:left;height:50px;line-height:50px; background:url(../../../images/top_b.gif) repeat-x;color:#333;}
-.nav_{position:relative;width:570px;margin:0 auto;font-size:14px;}
-.nav_ a{color:#fff;}
-.nav_ h3{ width:90px; text-align:center;font-size:100%;font-weight:normal; color:#cccccc;}
-.nav_ .m{float:left;position:relative;z-index:999;}
-.nav_ h3 a{display:block;width:90px;text-align:center;font-weight:bold;color:#dad8d8;}
-.nav_ .sub{display:none;position:absolute; height:auto;left:-3px;top:50px;z-index:1;width:160px;border-top:0;background: #d3d3d3 url(../../../images/hoverbj.gif) repeat-x;}
-.nav_ .sub li{text-align:center;width:150px;padding:0 5px;margin-bottom:-1px;}
-.nav_ .sub li a{display:block;border-bottom:1px solid #efefef;padding:8px 0;height:28px;line-height:28px;color:#262626;font-size:14px;font-weight:bold; background:url(../../../images/sub_li_let.jpg) 13px 20px no-repeat; font-family:'寰�杞���榛�'; font-size:14px; font-weight: 300}
-.nav_ .sub li a:hover{color:#FE7700;}
+.navBar{width:570px; float:left;height:50px;line-height:50px; background:url(../../../images/top_b.gif) repeat-x;color:#333;}
+.nav{position:relative;width:570px;margin:0 auto;font-size:14px;}
+.nav a{color:#fff;}
+.nav h3{ width:90px; text-align:center;font-size:100%;font-weight:normal; color:#cccccc;}
+.nav .m{float:left;position:relative;z-index:999;}
+.nav h3 a{display:block;width:90px;text-align:center;font-weight:bold;color:#dad8d8;}
+.nav .sub{display:none;position:absolute; height:auto;left:-3px;top:50px;z-index:1;width:160px;border-top:0;background: #d3d3d3 url(../../../images/hoverbj.gif) repeat-x;}
+.nav .sub li{text-align:center;width:150px;padding:0 5px;margin-bottom:-1px;}
+.nav .sub li a{display:block;border-bottom:1px solid #efefef;padding:8px 0;height:28px;line-height:28px;color:#262626;font-size:14px;font-weight:bold; background:url(../../../images/sub_li_let.jpg) 13px 20px no-repeat; font-family:'寰�杞���榛�'; font-size:14px; font-weight: 300}
+.nav .sub li a:hover{color:#FE7700;}
 /*涓��㈡椿�ㄧ��灏�绠�澶村�炬���峰�*/
 
-.nav_ .block{height:8px;width:100px;background: url(../../../images/subhover.png) no-repeat center top;position:absolute;top:42px; left:100px;overflow:hidden;}
+.nav .block{height:8px;width:100px;background: url(../../../images/subhover.png) no-repeat center top;position:absolute;top:42px; left:100px;overflow:hidden;}
 
 .big{ padding-top:5px;}
-.nav_ .block{height:8px;width:100px;background: url(../../../images/subhover.png) no-repeat center top;position:absolute;top:42px; left:100px;overflow:hidden;}
+.nav .block{height:8px;width:100px;background: url(../../../images/subhover.png) no-repeat center top;position:absolute;top:42px; left:100px;overflow:hidden;}
 .big{ padding-top:5px;}
 
 .search{ margin-top:10px;}

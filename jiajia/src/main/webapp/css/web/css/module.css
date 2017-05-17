@@ -20,7 +20,7 @@ a:active,a:focus { outline: none; }
 .fr{float:right;display:inline;}
 .clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
 .clearfix{display:block;}
-.clear_{ clear:both;}
+.clear{ clear:both;}
 .zoom{zoom:1;}
 .wrapper{ width:auto;}
 

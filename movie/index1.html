@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>视频直播</title>
+    <link href="video-js-6.6.0/video-js.css" rel="stylesheet">
+    <script src="video-js-6.6.0/video.js"></script>
+</head>
+<body>
+<!-- HLS协议 -->
+<video id="example_video_1" class="video-js vjs-default-skin" controls width="500" height="500">
+ <source src="rtmp://39.106.15.155:1935/myapp/film" type='video/x-msvideo' />
+</video> 
+<!-- RTMP协议 -->
+ <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="480" data-setup="{}" style="margin:auto 0;">  
+    <source src="rtmp://39.106.15.155:1935/myapp/film" type="rtmp/mp4"/>
+</video>
+
+</body> 
+</html>
+

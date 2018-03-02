@@ -1,0 +1,177 @@
+solr jetty集群服务器部署  http://lucene.apache.org/solr/guide/7_1/solr-tutorial.html
+
+solr操作指南
+solr 单服务器部署 
+1：tomcat，solr下载
+2：复制/usr/local/solr/solr-7.1.0中的server/solr-webapp/webapp下的webapp文件夹复制到tomcat/webapps下,并改个名字,比如改成solr7
+3：复制/usr/local/solr/solr-7.1.0中的server/lib/ext文件夹中所有jar包到tomcat/webapps/solr7/WEB-INF/lib
+4：复制/usr/local/solr/solr-7.1.0中的server/lib/metrics开头的jar包到tomcat/webapps/solr7/WEB-INF/lib
+5：复制/usr/local/solr/solr-7.1.0中的dist/solr-dataimporthandler-开头的jar包到tomcat/webapps/solr7/WEB-INF/lib
+6：在solr7/WEB-INF下新建classes目录并将solr7.1.0文件夹中的server/resources/log4j.properties复制过来
+7：在usr/local下新建solrhome文件夹并将solr-7.0.1文件夹下的server/solr文件夹下所有的复制过去
+8：编辑web.xml
+    1）找到eny-entry标签,去掉注释,并将env-entry-value设置成刚刚新建的solrhome的地址
+    2）找到security-constraint,并注释掉,有两个,在文件末尾.
+参考：
+    http://blog.csdn.net/cslucifer/article/details/78551941
+    
+    http://blog.csdn.net/zjcjava/article/details/56845453
+
+创建core 
+    1：mkdir 你的core名称mycore
+    2：复制solr-7.1.0/server/solr/configsets/sample_techproducts_configs/conf 文件夹到 mycore
+    3：vim core.properties，编辑 name = your core
+    4: mkdir data 
+    5:更改solrconfig.xml中的下面这一段配置的路径为自己的solrhome
+    <lib dir="/usr/local/solrhome/contrib/extraction/lib" regex=".*\.jar" />
+    <lib dir="/usr/local/solrhome/dist/" regex="solr-cell-\d.*\.jar" />
+    <lib dir="/usr/local/solrhome/contrib/clustering/lib/" regex=".*\.jar" />
+    <lib dir="/usr/local/solrhome/dist/" regex="solr-clustering-\d.*\.jar" />
+    <lib dir="/usr/local/solrhome/contrib/langid/lib/" regex=".*\.jar" />
+    <lib dir="/usr/local/solrhome/dist/" regex="solr-langid-\d.*\.jar" />
+    <lib dir="/usr/local/solrhome/dist/" regex="solr-ltr-\d.*\.jar" />
+    <lib dir="/usr/local/solrhome/contrib/velocity/lib" regex=".*\.jar" />
+    <lib dir="/usr/local/solrhome/dist/" regex="solr-velocity-\d.*\.jar" />
+      
+    参考:1:http://item1024.com/2017/09/22/solr/
+        2:http://www.cnblogs.com/zhangweizhong/p/5593909.html
+        3：http://www.cnblogs.com/wander1129/p/6658828.html
+solr高亮显示
+    1：https://segmentfault.com/a/1190000012349643
+
+添加dataimport配置（参考：例子 example-DIH）
+1：在solrconfig配置文件中添加如下配置(注意位置一定要放在其他的requestHandle附近，不这样做会导致，页面无法显示)
+  <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+      <str name="config">solr-data-config.xml</str>
+    </lst>
+  </requestHandler>
+
+  <lib dir="/usr/local/solrhome/dist/" regex="solr-dataimporthandler-.*\.jar" />
+2：在conf目录添加solr-data-config目录，并添加如下内容，并且修改为自己的配置
+    <dataConfig>
+    <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&amp;characterEncoding=UTF-8" user="test1" password="WOAINIljh223.." />
+        <document name="course">
+            <entity name="course" query="select id,name,description from course">
+                <field column="id" name="id"/>
+                <field column="name" name="name"/>
+                <field column="description" name="description"/>
+            </entity>
+        </document>
+    </dataConfig>
+将mysql的jar包加入到solr项目的lib目录
+
+dataimporthandler 操作
+full-import : Full Import operation can be started by hitting the URL http://<host>:<port>/solr/dataimport?command=full-import
+    This operation will be started in a new thread and the status attribute in the response should be shown busy now.
+
+    The operation may take some time depending on size of dataset.
+    When full-import command is executed, it stores the start time of the operation in a file located at conf/dataimport.properties (this file is configurable)
+
+    This stored timestamp is used when a delta-import operation is executed.
+    Queries to Solr are not blocked during full-imports.
+    It takes in extra parameters:
+    entity : Name of an entity directly under the <document> tag. Use this to execute one or more entities selectively. Multiple 'entity' parameters can be passed on to run multiple entities at once. If nothing is passed, all entities are executed.
+
+    clean : (default 'true'). Tells whether to clean up the index before the indexing is started.
+
+    commit : (default 'true'). Tells whether to commit after the operation.
+
+    optimize : (default 'true' up to Solr 3.6, 'false' afterwards). Tells whether to optimize after the operation. Please note: this can be a very expensive operation and usually does not make sense for delta-imports.
+
+    debug : (default 'false'). Runs in debug mode. It is used by the interactive development mode (see here).
+
+    Please note that in debug mode, documents are never committed automatically. If you want to run debug mode and commit the results too, add 'commit=true' as a request parameter.
+
+delta-import : For incremental imports and change detection run the command http://<host>:<port>/solr/dataimport?command=delta-import . It supports the same clean, commit, optimize and debug parameters as full-import command.
+增量导入solr-data-import如下所示配置
+<dataConfig>
+<dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&amp;characterEncoding=UTF-8" user="test1" password="WOAINIljh223.." />
+    <document name="course">
+        <entity name="course" pk="id" query="select id,name,description from course" 
+        deltaQuery="select id from course where last_modified>'${dataimporter.last_index_time}'">
+            <field column="id" name="id"/>
+            <field column="name" name="name"/>
+            <field column="description" name="description"/>
+            <field column="last_modified" name="last_modified"/>
+        </entity>
+    </document>
+</dataConfig>
+notice：
+1)deltaQuery表示表中的last_modified 大于 import最后执行的时间。
+2)配置完成后，需要在数据库导入到solr索引库中的表中加入last_modified,并且在修改，新增和的时候修改last_modified的时间，这个属性仅仅用于增量导入
+3)对于全局变量的理解${dih.last_index_time}  dih为固定值 表示的是DataImportHandler  ${test1.last_index_time}的值存放在conf/dataimport.properties中
+参考：http://yiduwangkai.iteye.com/blog/2269602
+
+
+
+IK分词器配置
+1:将IK分词器 JAR 包拷贝到solr7/server/solr_webapp/webapp/WEB-INF/lib/
+2:将词典 配置文件拷贝到 solr7/server/solr_webapp/webapp/WEB-INF/
+3: 更改test_core\conf\managed-schema配置文件
+<fieldType name="text_ik" class="solr.TextField">
+        <analyzer type="index">
+            <tokenizer class="org.apache.lucene.analysis.ik.IKTokenizerFactory" useSmart="true"/>
+        </analyzer>
+        <analyzer type="query">
+            <tokenizer class="org.apache.lucene.analysis.ik.IKTokenizerFactory" useSmart="true"/>
+        </analyzer>
+</fieldType>
+修改需要分词的field
+<field name="name" type="text_ik" indexed="true" stored="true"/>
+
+solr 中文分词官网推荐分词器 http://lucene.apache.org/solr/guide/7_1/language-analysis.html#simplified-chinese
+
+
+solr删除一个文档
+/opt/tomcat_solr1/bin/post -c core_test -url http://localhost:8099/solr7/core_test/update  -d '<delete><query>*:*</query></delete>'
+
+solr自带工具shell脚本  bin/post -url http://localhost/solr7/new_core/update -c new_core ~/innovaee/course.json 可以导入json ,xml 等格式的数据
+notice: conf目录下面的params.json参数去掉。
+参考url ： http://lucene.apache.org/solr/guide/7_1/post-tool.html
+
+Mysql 5.7 文档
+1：创建用户
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'newpass';
+2：修改密码
+SET PASSWORD FOR 'some_user'@'some_host' = PASSWORD('password');
+
+给用户授权
+grant all privileges on *.* to 'test1'@'%' ;
+
+所有的操作都在这里
+https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/
+
+授权页面
+https://www.cnblogs.com/jifeng/archive/2011/03/06/1972183.html
+
+每张表添加入库时间字段
+alter table ht_material add column last_modified datetime default '2018/01/11 00:00:00'
+alter table ht_training add column last_modified datetime default '2018/01/11 00:00:00'
+alter table ht_examination add column last_modified datetime default '2018/01/11 00:00:00'
+alter table ht_course add column last_modified datetime default '2018/01/11 00:00:00'
+
+alter table hts_dev.ht_material add column solr_type varchar(20) default '';
+alter table hts_dev.ht_training add column solr_type varchar(20) default '';
+alter table hts_dev.ht_examination add column solr_type varchar(20) default '';
+alter table hts_dev.ht_examination add column solr_type varchar(20) default '';
+
+update hts_dev.ht_material set solr_type = 'material';
+update hts_dev.ht_examination set solr_type = 'exam';
+update hts_dev.ht_training set solr_type = 'training';
+update hts_dev.ht_training set solr_type = 'course';
+
+
+
+select id,name,brief,description from hts_dev.ht_material;
+select id,name,brief,description from hts_dev.ht_training;
+select id,name,brief,description from hts_dev.ht_examination;
+
+图片url地址 RESOURCE_SERVER_URL+。。。slid+THUMBNAIL_PREFIX+IMAGE_SUFFIX
+
+bull 所有的状态用这张表
+
+
+
+
+

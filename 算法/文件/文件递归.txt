@@ -1,0 +1,28 @@
+/* 文件递归操作 */
+    public void transferPdf(String path) {
+        File file = new File(path);
+        if (file.exists()) {
+            File[] files = file.listFiles();
+            if (files.length == 0) {
+                System.out.println("文件夹是空的!");
+                return;
+            } else {
+                for (File file2 : files) {
+                    if (file2.isDirectory()) {
+                        System.out.println("文件夹:" + file2.getAbsolutePath());
+                        transferPdf(file2.getAbsolutePath());
+                    } else {
+
+                        System.out.println("文件:" + file2.getAbsolutePath());
+                        // 转换成 pdf 文件
+                        if (PDF_TYPE_LIST.contains(CheckFileTypeUtil.getFileType(file2.getAbsolutePath()))){
+                            System.out.println("转换 pdf ");
+                            POIUtils.ms2PDF(file2.getAbsolutePath(), file2.getAbsolutePath() + GlobalConstants.PREVIEW_SUFFIX, file2.getAbsolutePath());
+                        }
+                    }
+                }
+            }
+        } else {
+            System.out.println("文件不存在!");
+        }
+    }

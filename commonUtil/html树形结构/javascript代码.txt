@@ -1,0 +1,32 @@
+    /**
+     * <p>获取树的结构</p>
+     */
+    function getTreeData(workId){
+    	// 发送post请求获取树中的数据
+    	$.post("/user/works/tree",{workId:workId},function(result){
+    		console.log(result.data);
+    		var data = result.data;
+    		createTree(data,$workFile);
+    	});
+    }
+
+    /**
+     * <p>创建树形结构</p>
+     */
+    function createTree(data,currentParentNode){
+    	for(var p in data){
+			if(data[p] != 1){
+				// 创建一个文件夹
+				currentParentNode.append("<li><span class=\"folder\">"+p+"</span><ul current=\"110\"></ul></li>");
+				$.each(data[p],function(i,n){
+					createTree(n,currentParentNode.find("ul[current='110']"));
+					
+				});
+				currentParentNode.find("ul[current='110']").removeAttr("current");
+					
+			}else{
+				// 创建一个文件
+				currentParentNode.append("<li><span class=\"file\">"+p+"</span></li>");
+			}
+		}
+    }

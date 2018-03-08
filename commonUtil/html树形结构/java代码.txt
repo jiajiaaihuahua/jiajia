@@ -1,0 +1,26 @@
+/**
+ * 遍历文件夹，并且返回文件夹下面的所有文件
+ */
+
+public void findFileName(File file,JSONObject jsonObject){
+    if(file.exists()){
+        if(file.isDirectory()){
+            // 如果是目录，显示所有目录名称
+            JSONArray array = new JSONArray();
+            File[] fileList = file.listFiles();
+            for(File f : fileList){
+                JSONObject j = new JSONObject();
+                findFileName(f,j);
+                array.add(j);
+            }
+            jsonObject.put(file.getName(), array);
+        }else{
+            // 如果是文件，就把文件名称打印出来 1 表示的是文件 
+            jsonObject.put(file.getName(), 1);
+            System.out.println(file.getName());
+        }
+    }else{
+        System.out.println("文件并不存在!");
+    }
+    
+}

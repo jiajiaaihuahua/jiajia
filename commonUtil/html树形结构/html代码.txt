@@ -1,0 +1,20 @@
+                            <ul id="workFile" class="filetree">
+                                <!--  <li><span class="folder">Folder 1</span>
+                                    <ul>
+                                        <li><span class="file">Item 1.1</span></li>
+                                        <li><span class="file">Item 1.2</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="folder">Folder 2</span>
+                                    <ul>
+                                        <li><span class="folder">Subfolder 2.1</span>
+                                            <ul id="folder21">
+                                                <li><span class="file">File 2.1.1</span></li>
+                                                <li><span class="file">File 2.1.2</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="file">File 2.2</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="file">File 4</span></li>  -->
+                            </ul>

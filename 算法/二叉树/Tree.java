@@ -35,10 +35,11 @@ public class Tree {
      * <p>将list集合加入到树中</p>
      */
     private void addTree(List<Long> list,UserIdTree root){
-        // 设置指针节点为root节点
-        UserIdTree currentNode = root ;
+        
         // 将 DiscussUserIdList 加入到树中
         for( int i = 1 ; i<list.size() ; i++){
+		// 设置指针节点为root节点
+        	UserIdTree currentNode = root ;
         	while( true ){
         		// 比较当前节点,如果比当前节点小就往左边走
             	if(list.get(i).longValue() < currentNode.data){
